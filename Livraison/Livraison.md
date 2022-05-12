@@ -5,10 +5,13 @@
 Mise en place du projet 
 Integration continue avec travis
 Integration du maven
-Création des classes suisvantes:
+Création des classes suivantes:
 Joueur: qui permet d'initialiser un joueuer
-Partie: 
+Partie: permet la création d'une partie
+Appariement:
+Anagrammeur:
+main: qui est la classe principale du jeu
 
 
 ##Test
-Aucun n'a été effectué pour le moment
+Aucun test n'a été effectué pour le moment
