@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>scrabble</artifactId>
+    <artifactId>partie</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>scrabble</name>
-    <description>Jeu de scrabble par winners</description>
+    <name>partie</name>
+    <description>Entité partie du scrabble</description>
     <properties>
         <java.version>8</java.version>
         <repackage.classifier/>
@@ -26,6 +26,7 @@
         <dependency>
             <groupId>org.springframework.experimental</groupId>
             <artifactId>spring-native</artifactId>
+            <version>${spring-native.version}</version>
         </dependency>
 
         <dependency>
@@ -75,6 +76,7 @@
             <plugin>
                 <groupId>org.springframework.experimental</groupId>
                 <artifactId>spring-aot-maven-plugin</artifactId>
+                <version>${spring-native.version}</version>
                 <executions>
                     <execution>
                         <id>test-generate</id>
