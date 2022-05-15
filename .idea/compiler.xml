@@ -6,9 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="scrabble-td3-winners" />
         <module name="PROJECT" />
+        <module name="partie" />
+        <module name="appariement" />
+        <module name="anagrammeur" />
+        <module name="joueur" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="anagrammeur" options="" />
+      <module name="appariement" options="" />
+      <module name="partie" options="" />
+      <module name="scrabble-td3-winners" options="-parameters" />
+    </option>
   </component>
 </project>
