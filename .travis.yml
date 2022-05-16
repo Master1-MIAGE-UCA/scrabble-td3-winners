@@ -3,14 +3,26 @@ language: java
 jdk:
   - openjdk8
 
+services:
+  - docker
+
 install:
-  - mvn clean install -DskipTests
+  - mvn install -DskipTests
+
+# before_script:
+#   - docker-compose --version
+#   - docker ps -a -q
+#   - docker build serveur -t exempleio:serveur
+#   - docker build client -t exempleio:client
+#   - docker images
 
 script:
   - mvn test
-  - mvn exec:java &
-  - mvn exec:java
   - cd partie
+  - mvn exec:java &
   - cd joueur
+  - mvn exec:java
   - cd appariement
+  - mvn exec:java
   - cd anagrammeur
+  - mvn exec:java
