@@ -9,15 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.example</groupId>
+    <groupId>com.example.anagrammeur</groupId>
     <artifactId>anagrammeur</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>anagrammeur</name>
     <description>Entité anagrammeur du projet</description>
     <properties>
         <java.version>8</java.version>
-        <maven.compiler.target>3.1</maven.compiler.target>
-        <maven.compiler.source>3.1</maven.compiler.source>
     </properties>
     <build>
         <plugins>
@@ -39,6 +37,14 @@
                 </executions>
                 <configuration>
                     <mainClass>anagrammeur.anagrammeurHelloWorld</mainClass>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
