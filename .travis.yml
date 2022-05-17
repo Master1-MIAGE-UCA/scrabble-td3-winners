@@ -17,9 +17,9 @@ install:
 #   - docker images
 
 script:
-  -mvn test
-  -cd partie
-  -mvn exec:java
+  - mvn test
+  - cd partie
+  - mvn exec:java
   - cd ..
   - cd joueur
   - mvn exec:java
