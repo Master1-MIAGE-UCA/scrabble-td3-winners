@@ -1,4 +1,4 @@
-package appariment;
+package appariement;
 
 public class appariementHelloWorld {
     static void main(String[] args){
