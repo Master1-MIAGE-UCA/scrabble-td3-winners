@@ -17,16 +17,16 @@ install:
 #   - docker images
 
 script:
-  - mvn test
-  - cd partie
-  - mvn exec:java
-  - cd..
+  -mvn test
+  -cd partie
+  -mvn exec:java
+  - cd ..
   - cd joueur
   - mvn exec:java
-  - cd..
+  - cd ..
   - cd appariement
   - mvn exec:java
-  - cd..
+  - cd ..
   - cd anagrammeur
   - mvn exec:java
-  - cd..
+  - cd ..
