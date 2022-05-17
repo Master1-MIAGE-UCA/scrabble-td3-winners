@@ -8,17 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="appariement" />
         <module name="joueur" />
-        <module name="partie" />
         <module name="PROJECT" />
         <module name="anagrammeur" />
+        <module name="partie" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="anagrammeur" options="" />
-      <module name="appariement" options="" />
-      <module name="partie" options="" />
+      <module name="anagrammeur" options="-parameters" />
+      <module name="appariement" options="-parameters" />
+      <module name="joueur" options="-parameters" />
+      <module name="partie" options="-parameters" />
       <module name="scrabble-td3-winners" options="-parameters" />
     </option>
   </component>
