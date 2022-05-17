@@ -13,9 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>partie</name>
     <description>Entité partie du scrabble</description>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
+
     <build>
         <plugins>
 

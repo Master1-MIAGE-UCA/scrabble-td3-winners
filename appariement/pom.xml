@@ -14,9 +14,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>appariement</name>
     <description>Entité appariement du scrabble</description>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
+
     <build>
         <plugins>
 

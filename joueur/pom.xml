@@ -12,9 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>joueur</name>
     <description>Entité joueur du scrabble</description>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
+
     <build>
         <plugins>
 

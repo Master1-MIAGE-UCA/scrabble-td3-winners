@@ -14,9 +14,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>anagrammeur</name>
     <description>Entité anagrammeur du projet</description>
-    <properties>
-        <java.version>8</java.version>
-    </properties>
+
     <build>
         <plugins>
 
