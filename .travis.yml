@@ -18,11 +18,15 @@ install:
 
 script:
   - mvn test
-  # - cd ./partie
-  - mvn exec:java 
-  # - cd ./joueur
-  # - mvn exec:java
-  # - cd ./appariement
-  # - mvn exec:java
-  # - cd ./anagrammeur
-  # - mvn exec:java
+  - cd ./partie
+  - mvn exec:java
+  - cd..
+  - cd ./joueur
+  - mvn exec:java
+  - cd..
+  - cd ./appariement
+  - mvn exec:java
+  - cd..
+  - cd ./anagrammeur
+  - mvn exec:java
+  - cd..
