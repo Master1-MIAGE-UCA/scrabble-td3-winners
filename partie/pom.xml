@@ -55,7 +55,7 @@
 
                 </executions>
                 <configuration>
-                    <mainClass>partie.partieHelloWorld</mainClass>
+                    <mainClass>partie.PartieApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>

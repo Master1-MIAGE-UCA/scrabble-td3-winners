@@ -1,5 +1,8 @@
 package partie.Partie;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Partie {
 
     Thread game ;

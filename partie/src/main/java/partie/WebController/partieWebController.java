@@ -13,6 +13,7 @@ import static org.springframework.web.reactive.function.client.WebClient.create;
 
 @RestController
 public class partieWebController {
+
     playerIdentification playerId;
 
     /**
@@ -20,6 +21,7 @@ public class partieWebController {
      */
     @Autowired
     Partie game;
+
     private WebClient webClient;
 
 
