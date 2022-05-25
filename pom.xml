@@ -18,8 +18,8 @@
    <modules>
        <module>anagrammeur</module>
        <module>appariement</module>
-       <module>player</module>
        <module>partie</module>
+       <module>player</module>
    </modules>
 <packaging>pom</packaging>
 
