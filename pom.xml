@@ -18,7 +18,7 @@
    <modules>
        <module>anagrammeur</module>
        <module>appariement</module>
-       <module>joueur</module>
+       <module>player</module>
        <module>partie</module>
    </modules>
 <packaging>pom</packaging>

@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="appariement" />
-        <module name="joueur" />
-        <module name="partie" />
+        <module name="player" />
         <module name="PROJECT" />
         <module name="anagrammeur" />
+        <module name="partie" />
       </profile>
       <profile name="Annotation profile for Unknown" enabled="true">
         <sourceOutputDir name="../../target/generated-sources/annotations" />
@@ -19,6 +19,9 @@
         <module name="wrapper" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="joueur" target="7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -26,6 +29,7 @@
       <module name="appariement" options="-parameters" />
       <module name="joueur" options="-parameters" />
       <module name="partie" options="-parameters" />
+      <module name="player" options="-parameters" />
       <module name="scrabble-td3-winners" options="-parameters" />
     </option>
   </component>
