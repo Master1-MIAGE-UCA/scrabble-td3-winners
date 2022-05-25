@@ -1,9 +1,11 @@
 package partie.Partie;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Partie {
+@Scope("singleton")
+public class Partie implements Runnable{
 
     Thread game ;
 
@@ -11,7 +13,7 @@ public class Partie {
         boolean result = (game == null);
         if (result) {
             System.out.println("Partie > la partie est démarrée");
-            game = new Thread((Runnable) this);
+            game = new Thread(this);
             game.start();
         } else {
             System.out.println("Partie > la partie est déjà démarrée");
@@ -19,4 +21,8 @@ public class Partie {
         return result;
     }
 
+    @Override
+    public void run() {
+        System.out.println("Partie > le jeu commence");
+    }
 }
