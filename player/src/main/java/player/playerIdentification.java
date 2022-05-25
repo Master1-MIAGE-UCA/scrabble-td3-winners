@@ -10,6 +10,10 @@ public class playerIdentification {
 
     }
 
+    public playerIdentification() {
+        this("nametest","urltest");
+    }
+
     public String getName() {
         return name;
     }
