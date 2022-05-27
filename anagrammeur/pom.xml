@@ -9,8 +9,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.example.anagrammeur</groupId>
     <artifactId>anagrammeur</artifactId>
+    <groupId>com.example</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <name>anagrammeur</name>
     <description>Entité anagrammeur du projet</description>

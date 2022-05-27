@@ -3,8 +3,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class appariementHelloWorld {
+public class appariement {
     public static void main(String[] args) {
-        SpringApplication.run(appariementHelloWorld.class, args);
+        SpringApplication.run(appariement.class, args);
     }
 }
