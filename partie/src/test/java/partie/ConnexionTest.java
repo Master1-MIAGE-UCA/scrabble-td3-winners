@@ -1,4 +1,4 @@
-package com.example.partie;
+package partie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;

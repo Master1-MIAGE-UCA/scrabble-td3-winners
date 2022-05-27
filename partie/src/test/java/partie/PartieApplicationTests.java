@@ -1,4 +1,4 @@
-package com.example.partie;
+package partie;
 
 
 class PartieApplicationTests {
