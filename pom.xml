@@ -21,6 +21,7 @@
        <module>partie</module>
        <module>player</module>
    </modules>
+
 <packaging>pom</packaging>
 
     <properties>
