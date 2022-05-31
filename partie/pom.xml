@@ -15,10 +15,7 @@
             <version>0.0.1-SNAPSHOT</version>
 
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
     </dependencies>
 
 
@@ -64,6 +61,34 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+
+
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+
+                </executions>
+                <configuration>
+                    <mainClass>player.PlayerApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
