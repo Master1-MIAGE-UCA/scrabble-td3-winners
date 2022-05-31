@@ -1,5 +1,6 @@
 package partie.WebController;
 
+import main.java.player.playerIdentification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import partie.Partie.Partie;
-import player.*;
 
 import static org.springframework.web.reactive.function.client.WebClient.create;
 

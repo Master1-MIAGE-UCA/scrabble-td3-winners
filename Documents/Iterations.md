@@ -1,5 +1,5 @@
-#Milestone 1 Mise en place du jeu
-##tache 1: Finalisation de l'integration spring
+# Milestone 1 Mise en place du jeu
+## tache 1: Finalisation de l'integration spring
 ## Tache 2: Integration des webServices.(Refléchir sur les API)
 ### sous-tache 1: Un joueur peut envoyer au serveur une requete post pour positionner un mot
 ### sous-tache 2:Un joueur peut demander de finir un jeu
@@ -19,12 +19,12 @@
 ## tache 4: L'anagrammeur et partie peuvent s'identifier dans l'appariement.
 ### sous-tache 1: L'annagrammeur peut se connecter à l'appariement en donnant son url
 ### sous-tache 2: La partie peut se connecter à l'appariement en donnant son url.
-##tache 5: Le joueur peut rejoindre une partie
+## tache 5: Le joueur peut rejoindre une partie
 ### sous-tache 1: Pour rejoindre une partie le joueur doit s'identi
 ### sous-tache 2: 
 ## Tache 6: 
 
-#Milestone 2
+# Milestone 2
 
-#Milestone 3
+# Milestone 3
 

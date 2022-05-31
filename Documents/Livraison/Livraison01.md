@@ -10,7 +10,7 @@ Integration du maven
 
 Création des classes suivantes:
 
-Joueur: qui permet d'initialiser un joueuer
+Joueur: qui permet d'initialiser un joueur
 
 Partie: permet la création d'une partie
 

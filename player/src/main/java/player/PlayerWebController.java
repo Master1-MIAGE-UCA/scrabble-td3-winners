@@ -1,13 +1,10 @@
 package player;
-
-import anagrammeur.gameState;
-import anagrammeur.placedWord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.concurrent.TimeUnit;
+import main.java.anagrammeur.gameState;
+import main.java.anagrammeur.placedWord;
 
 
 @RestController
