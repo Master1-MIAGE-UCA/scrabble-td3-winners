@@ -19,6 +19,7 @@
        <module>anagrammeur</module>
        <module>appariement</module>
        <module>partie</module>
+       <module>classesCommunes</module>
        <module>player</module>
    </modules>
 

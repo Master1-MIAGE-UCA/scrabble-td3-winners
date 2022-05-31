@@ -1,6 +1,8 @@
 package player;
-import main.java.anagrammeur.gameState;
-import main.java.anagrammeur.placedWord;
+
+
+import anagrammeur.gameState;
+import anagrammeur.placedWord;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 

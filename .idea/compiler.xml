@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="appariement" />
-        <module name="player" />
-        <module name="partie" />
         <module name="PROJECT" />
+        <module name="classesCommunes" />
+        <module name="partie" />
+        <module name="appariement" />
         <module name="anagrammeur" />
+        <module name="player" />
       </profile>
     </annotationProcessing>
   </component>

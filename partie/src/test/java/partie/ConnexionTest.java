@@ -1,7 +1,6 @@
 package partie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import main.java.player.playerIdentification;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import partie.Partie.Partie;
 import partie.WebController.partieWebController;
+import player.playerIdentification;
 
 import java.util.concurrent.TimeUnit;
 
@@ -56,8 +56,7 @@ public class ConnexionTest {
     }
 
 
-    @Test
-    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
+    @Test    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
         playerIdentification id = new playerIdentification();
         String paramConnexion = objectMapper.writeValueAsString(id);
 
