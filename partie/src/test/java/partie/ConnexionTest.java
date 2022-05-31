@@ -47,12 +47,12 @@ public class ConnexionTest {
     @BeforeEach
     void initTest() {
         partie = spy(testPartie);
-        ReflectionTestUtils.setField(webController, "partie", partie);
+        ReflectionTestUtils.setField(webController, "game", partie);
     }
 
     @Test
     public void shouldReturnTrue() throws Exception {
-        this.mockMvc.perform(post("/Try/")).andDo(print()).andExpect(status().isOk())
+          this.mockMvc.perform(post("/Try/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("true")));
     }
 
