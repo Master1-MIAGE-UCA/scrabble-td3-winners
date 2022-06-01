@@ -7,7 +7,7 @@ services:
   - docker
 
 install:
-  - mvn install -DskipTests
+  - mvn clean install -DskipTests
 
 # before_script:
 #   - docker-compose --version
