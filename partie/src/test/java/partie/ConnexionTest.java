@@ -49,12 +49,6 @@ public class ConnexionTest {
         ReflectionTestUtils.setField(webController, "game", partie);
     }
 
-    @Test
-    public void shouldReturnTrue() throws Exception {
-          this.mockMvc.perform(post("/Try/")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("true")));
-    }
-
 
     @Test    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
         playerIdentification id = new playerIdentification();
