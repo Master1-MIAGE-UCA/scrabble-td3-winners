@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
 import partie.Partie.Partie;
-import player.playerIdentification;
+import play.playerIdentification;
 
 import static org.springframework.web.reactive.function.client.WebClient.create;
 

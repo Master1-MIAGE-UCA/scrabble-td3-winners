@@ -1,4 +1,4 @@
-package anagrammeur;
+package anagramme;
 
 import java.util.ArrayList;
 

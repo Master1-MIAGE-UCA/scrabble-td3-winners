@@ -11,7 +11,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import partie.Partie.Partie;
 import partie.WebController.partieWebController;
-import player.playerIdentification;
+import play.playerIdentification;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +20,6 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -48,13 +47,6 @@ public class ConnexionTest {
         partie = spy(testPartie);
         ReflectionTestUtils.setField(webController, "game", partie);
     }
-
-    @Test
-    public void shouldReturnTrue() throws Exception {
-          this.mockMvc.perform(post("/Try/")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("true")));
-    }
-
 
     @Test    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
         playerIdentification id = new playerIdentification();

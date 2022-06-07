@@ -1,4 +1,4 @@
-package anagrammeur;
+package anagramme;
 
 public class placedWord {
     private String word;

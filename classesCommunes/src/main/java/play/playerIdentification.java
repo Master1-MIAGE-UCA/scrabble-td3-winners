@@ -1,4 +1,4 @@
-package player;
+package play;
 
 public class playerIdentification {
     private String name;
