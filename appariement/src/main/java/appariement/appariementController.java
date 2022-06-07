@@ -7,16 +7,17 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 @RestController
 public class appariementController {
-    String URLa;
+
     String URLp;
-    @PostMapping("/identification/anagrammeur/")
-    public String identAnagrammeur(@RequestBody String URL) {
-        this.URLa = URL;
-        return this.URLa;
-    }
-    @PostMapping("/identification/partie/")
-    public String identPartie(@RequestBody String URL) {
-        this.URLp = URL;
+    @PostMapping("/identification/Joueur")
+    public String identAnagrammeur() {
+
         return this.URLp;
     }
+    @PostMapping("/identification/partie/")
+    public void identPartie(@RequestBody String URL) {
+        this.URLp = URL;
+
+    }
+
 }
