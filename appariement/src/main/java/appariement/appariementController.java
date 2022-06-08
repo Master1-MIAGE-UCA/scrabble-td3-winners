@@ -13,7 +13,9 @@ public class appariementController {
     ArrayList<AbstractMap.SimpleEntry<String, String> > URL_Anagram_Partie_auth = new ArrayList<AbstractMap.SimpleEntry<String, String> >();
 
     private ArrayList<String> URLjoueurs = new ArrayList<>();
-
+    //le joueur se connect est recupere les url de l'annagrameur et la partie
+    //il recupere aussi l'autorisation pour lancer la partie ( si > 2 joueur sont connecté)
+    // les données sont recuperé sous forme de list de pair <key,value>
     @PostMapping("/identification/Joueur")
     public ArrayList<AbstractMap.SimpleEntry<String, String> > identAnagrammeur() {
         System.out.println("Appariement > un joueur est connecté ");
@@ -23,6 +25,7 @@ if (this.URLjoueurs.size() > 1){
 }
         return this.URL_Anagram_Partie_auth;
     }
+    //la partie se connect est donne son URL
     @PostMapping("/identification/partie")
     public void identPartie(@RequestBody String URL) {
         System.out.println("Appariement > une partie est connecté ");
@@ -30,6 +33,7 @@ if (this.URLjoueurs.size() > 1){
 
 
     }
+    //l'annagrammeur se connect est donne son URL
     @PostMapping("/identification/Annagrameur")
     public void identAnnagrameur(@RequestBody String URL) {
         System.out.println("Appariement > un annagrameur est connecté ");
