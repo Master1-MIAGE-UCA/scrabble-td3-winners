@@ -1,7 +1,5 @@
 # Appariement
--  Pour que les 3 modules puissent se connecter entre eux(à voir avec safouane car il avait commencé)
-- récupérer url joueur et partie
-- Commencer la partie dès que 2 joueurs sont connectés
+
 
 # Anagrammeur
 - Créer dictionnaire de mots
