@@ -2,10 +2,13 @@ package partie.Partie;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import play.playerIdentification;
+
+import java.util.ArrayList;
 
 @Component
 public class Partie implements Runnable{
-
+private ArrayList<playerIdentification> listPlayer;
     Thread game ;
 
     public boolean lancerPartie() {
@@ -23,5 +26,18 @@ public class Partie implements Runnable{
     @Override
     public void run() {
         System.out.println("Partie > le jeu commence");
+    }
+
+    public ArrayList<playerIdentification> getListPlayer() {
+        return listPlayer;
+    }
+
+    public void setListPlayer(ArrayList<playerIdentification> listPlayer) {
+        this.listPlayer = listPlayer;
+    }
+    public void addPlayer(playerIdentification Player) {
+
+
+        this.listPlayer.add(Player);
     }
 }

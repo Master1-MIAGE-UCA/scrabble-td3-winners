@@ -26,10 +26,16 @@ public class partieWebController {
 
 
     @PostMapping("/connexion/")
-    public boolean getValue(@RequestBody playerIdentification playerId) {
+    public void getValue(@RequestBody playerIdentification playerId) {
         System.out.println("Moteur > connexion acceptée de "+playerId.getName());
         this.playerId = playerId;
-        webClient = create(playerId.getUrl());
-        return game.lancerPartie();
+       // webClient = create(playerId.getUrl());
+game.addPlayer(this.playerId );
+
+    }
+    @PostMapping("/startPartie")
+    public void startPartie() {
+     game.lancerPartie();
+
     }
 }

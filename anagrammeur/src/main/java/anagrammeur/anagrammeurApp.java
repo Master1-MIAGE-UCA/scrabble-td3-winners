@@ -1,23 +1,20 @@
-package partie;
-
+package anagrammeur;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
 import java.net.InetAddress;
 
 @SpringBootApplication
-public class PartieApplication {
+public class anagrammeurApp {
     @Value("${server.port}")
     private int port;
     public static void main(String[] args) {
-        SpringApplication.run(PartieApplication.class, args);
+        SpringApplication.run(anagrammeurApp.class, args);
     }
-    @Bean
     public CommandLineRunner scriptLancement(WebClient.Builder builder) {
         return args -> {
             if (args.length > 0) {
@@ -26,7 +23,7 @@ public class PartieApplication {
                 WebClient client = builder.baseUrl(urlApp).build();
 
                 String myIp = InetAddress.getLocalHost().getHostAddress();
-                client.post().uri("/identification/partie")
+                client.post().uri("/identification/Annagrameur")
                         .body(Mono.just("http://" + myIp + ":" + port), String.class)
                         .retrieve().bodyToMono(String[].class).block();
 
