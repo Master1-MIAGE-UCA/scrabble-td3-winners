@@ -4,10 +4,11 @@ import anagramme.gameState;
 import anagramme.placedWord;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import play.playerIdentification;
 
 @Component
 @Scope("singleton")
-public class Player {
+public class Player extends playerIdentification {
 
     private String url_anagrammeur;
     //  Function that permit player to place a word according to abscissa and ordinate

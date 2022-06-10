@@ -50,15 +50,15 @@ public class PlayerApplication {
                     if (key =="URLpartie" ){ this.Url_partie =map.getValue(); }
                     if (key =="URLanagram" ){ this.Url_anagrammeur =map.getValue(); }
                 }
+
                player.setUrl_anagrammeur(this.Url_anagrammeur);
 
-                playerIdentification me = new playerIdentification();
-                me.setUrl("http://" + myIp + ":" + port);
-                me.setName("random");
+                player.setUrl("http://" + myIp + ":" + port);
+                player.setName("random");
                 WebClient client_for_partie = builder.baseUrl(this.Url_partie).build();
 
                  client_for_partie.post().uri("/connexion")
-                        .body(Mono.just(me), playerIdentification.class)
+                        .body(Mono.just(player), playerIdentification.class)
                         .retrieve().bodyToMono( String.class).block();
 
 
