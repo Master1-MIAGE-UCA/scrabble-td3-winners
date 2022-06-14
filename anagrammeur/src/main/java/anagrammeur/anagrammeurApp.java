@@ -1,8 +1,10 @@
 package anagrammeur;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -15,6 +17,8 @@ public class anagrammeurApp {
     public static void main(String[] args) {
         SpringApplication.run(anagrammeurApp.class, args);
     }
+
+    @Bean
     public CommandLineRunner scriptLancement(WebClient.Builder builder) {
         return args -> {
             if (args.length > 0) {

@@ -18,15 +18,15 @@ install:
 
 script:
   - mvn test
-  - cd partie
-  - mvn exec:java
-  - cd ..
-  - cd joueur
-  - mvn exec:java
-  - cd ..
   - cd appariement
-  - mvn exec:java
+  - mvn exec:java &
+  - cd ..
+  - cd partie
+  - mvn exec:java -Dserver.port=9090 -Dexec.args="http://localhost:8080" &
   - cd ..
   - cd anagrammeur
-  - mvn exec:java
+  - mvn exec:java -Dserver.port=9191 -Dexec.args="http://localhost:8080" &
+  - cd ..
+  - cd player
+  - mvn exec: -Dserver.port=9292 -Dexec.args="http://localhost:8080" 
   - cd ..

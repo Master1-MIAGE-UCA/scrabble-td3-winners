@@ -3,6 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -14,7 +15,8 @@ import java.util.AbstractMap;
 import java.util.ArrayList;
 
 @SpringBootApplication
-public class PlayerApplication {
+public class
+PlayerApplication {
     @Value("${server.port}")
     private int port;
     private String Url_partie;
@@ -25,6 +27,7 @@ public class PlayerApplication {
         SpringApplication.run(PlayerApplication.class, args);
     }
 
+    @Bean
     public CommandLineRunner scriptLancement(WebClient.Builder builder) {
         return args -> {
             if (args.length > 0) {
