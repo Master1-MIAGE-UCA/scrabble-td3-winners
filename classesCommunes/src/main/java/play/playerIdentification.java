@@ -11,7 +11,7 @@ public class playerIdentification {
     }
 
     public playerIdentification() {
-        this("nametest","urltest");
+        this("nametest","http://localhost");
     }
 
     public String getName() {

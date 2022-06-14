@@ -1,5 +1,4 @@
 # Appariement
-test
 # Anagrammeur
 - Créer dictionnaire de mots
 - Lui donner une liste de lettre et qu'il donne les mots possibles

@@ -28,5 +28,5 @@ script:
   - mvn exec:java -Dserver.port=9191 -Dexec.args="http://localhost:8080" &
   - cd ..
   - cd player
-  - mvn exec: -Dserver.port=9292 -Dexec.args="http://localhost:8080" 
+  - mvn exec:java -Dserver.port=9292 -Dexec.args="http://localhost:8080" 
   - cd ..
