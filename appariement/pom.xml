@@ -42,7 +42,7 @@
 
                 </executions>
                 <configuration>
-                    <mainClass>appariement.appariementHelloWorld</mainClass>
+                    <mainClass>appariement.appariement</mainClass>
                 </configuration>
             </plugin>
             <plugin>

@@ -36,23 +36,14 @@ PlayerApplication {
                 WebClient client = builder.baseUrl(urlApp).build();
 
                 String myIp = InetAddress.getLocalHost().getHostAddress();
-                ArrayList<AbstractMap.SimpleEntry<String, String> > URL_Anagram_Partie_auth =  client.post().uri("/identification/Joueur")
-                        .body(Mono.just("http://" + myIp + ":" + port), String.class)
-                        .retrieve().bodyToMono( new ParameterizedTypeReference<ArrayList<AbstractMap.SimpleEntry<String, String>>>(){}).block();
+                String[]  URL_Anagram_Partie_auth =  client.post().uri("/identification/Joueur")
+                        .body(Mono.just("https://" + myIp + ":" + port), String.class)
+                        .retrieve().bodyToMono( String[].class ).block();
 
 
-                for (int i = 0; i < URL_Anagram_Partie_auth.size(); i++) {
+                  this.Url_partie =URL_Anagram_Partie_auth[0] ;
+                   this.Url_anagrammeur =URL_Anagram_Partie_auth[1];
 
-                    // get map from list
-                    AbstractMap.SimpleEntry<String, String>
-                            map
-                            = URL_Anagram_Partie_auth.get(i);
-
-                    // get key from map.getKey()
-                    String key = map.getKey();
-                    if (key =="URLpartie" ){ this.Url_partie =map.getValue(); }
-                    if (key =="URLanagram" ){ this.Url_anagrammeur =map.getValue(); }
-                }
 
                player.setUrl_anagrammeur(this.Url_anagrammeur);
 
@@ -65,7 +56,7 @@ PlayerApplication {
                         .retrieve().bodyToMono( String.class).block();
 
 
-                if (URL_Anagram_Partie_auth.size() == 3 ){
+                if (URL_Anagram_Partie_auth.length == 3 ){
 
                     client_for_partie.post().uri("/startPartie")
                             .body(Mono.just("http://" + myIp + ":" + port), String.class)

@@ -11,8 +11,8 @@
 
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>player</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>classesCommunes</artifactId>
+            <version>1</version>
 
         </dependency>
 

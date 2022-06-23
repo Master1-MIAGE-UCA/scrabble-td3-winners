@@ -10,8 +10,8 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class appariementController {
 
-    ArrayList<AbstractMap.SimpleEntry<String, String> > URL_Anagram_Partie_auth = new ArrayList<AbstractMap.SimpleEntry<String, String> >();
-
+  //  private final ArrayList<AbstractMap.SimpleEntry<String, String> > URL_Anagram_Partie_auth = new ArrayList<AbstractMap.SimpleEntry<String, String> >();
+   private String[] URL_Anagram_Partie_auth ;
     private ArrayList<String> URLjoueurs = new ArrayList<>();
     private int i = 0;
 
@@ -19,12 +19,12 @@ public class appariementController {
     //il recupere aussi l'autorisation pour lancer la partie ( si > 2 joueur sont connecté)
     // les données sont recuperé sous forme de list de pair <key,value>
     @PostMapping("/identification/Joueur")
-    public ArrayList<AbstractMap.SimpleEntry<String, String> > identjoueur() {
+    public String[]  identjoueur() {
         System.out.println("Appariement > un joueur est connecté ");
         this.URLjoueurs.add("player number" + this.i );
         i++;
 if (this.URLjoueurs.size() > 1){
-    this.URL_Anagram_Partie_auth.add(new AbstractMap.SimpleEntry("CanStart", "true"));
+    this.URL_Anagram_Partie_auth[2] = "canStart";
 
 }
         return this.URL_Anagram_Partie_auth;
@@ -33,7 +33,8 @@ if (this.URLjoueurs.size() > 1){
     @PostMapping("/identification/partie")
     public void identPartie(@RequestBody String URL) {
         System.out.println("Appariement > une partie est connecté ");
-        this.URL_Anagram_Partie_auth.add(new AbstractMap.SimpleEntry("URLpartie", URL));
+
+        this.URL_Anagram_Partie_auth [0] = URL;
 
 
     }
@@ -41,7 +42,7 @@ if (this.URLjoueurs.size() > 1){
     @PostMapping("/identification/Annagrameur")
     public void identAnnagrameur(@RequestBody String URL) {
         System.out.println("Appariement > un annagrameur est connecté ");
-        this.URL_Anagram_Partie_auth.add(new AbstractMap.SimpleEntry("URLanagram", URL));
+        this.URL_Anagram_Partie_auth [1] = URL;
 
 
     }

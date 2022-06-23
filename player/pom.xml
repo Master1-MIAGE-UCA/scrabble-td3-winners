@@ -29,8 +29,8 @@
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>classesCommunes</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <version>1</version>
+
         </dependency>
     </dependencies>
 

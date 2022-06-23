@@ -28,7 +28,7 @@ public class PartieApplication {
                 String myIp = InetAddress.getLocalHost().getHostAddress();
                 client.post().uri("/identification/partie")
                         .body(Mono.just("http://" + myIp + ":" + port), String.class)
-                        .retrieve().bodyToMono(String[].class).block();
+                        .retrieve().bodyToMono(String[].class);
 
 
             }
