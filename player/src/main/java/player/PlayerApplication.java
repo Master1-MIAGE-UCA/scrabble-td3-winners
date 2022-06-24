@@ -9,7 +9,7 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.web.reactive.function.client.WebClient;
 import play.playerIdentification;
 import reactor.core.publisher.Mono;
-
+import Responses.UrlResponse;
 import java.net.InetAddress;
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -34,29 +34,30 @@ PlayerApplication {
                 // args[0] c'est l'uril d'appariement, en version courte ici pour simplifier la ligne de commande
                 String urlApp = "http://localhost:" + args[0];
                 WebClient client = builder.baseUrl(urlApp).build();
-
+                UrlResponse urls = new UrlResponse();
                 String myIp = InetAddress.getLocalHost().getHostAddress();
-                String[]  URL_Anagram_Partie_auth =  client.post().uri("/identification/Joueur")
+                urls   =  client.post().uri("/identification/Joueur")
                         .body(Mono.just("https://" + myIp + ":" + port), String.class)
-                        .retrieve().bodyToMono( String[].class ).block();
+                        .retrieve().bodyToMono( UrlResponse.class ).block();
 
 
-                  this.Url_partie =URL_Anagram_Partie_auth[0] ;
-                   this.Url_anagrammeur =URL_Anagram_Partie_auth[1];
+                  this.Url_partie =urls.getUrlPartie();
+                   this.Url_anagrammeur =urls.getUrlAnnagrameur();
 
 
                player.setUrl_anagrammeur(this.Url_anagrammeur);
 
                 player.setUrl("http://" + myIp + ":" + port);
                 player.setName("random");
+
                 WebClient client_for_partie = builder.baseUrl(this.Url_partie).build();
 
-                 client_for_partie.post().uri("/connexion")
+                 client_for_partie.post().uri("/connexion/")
                         .body(Mono.just(player), playerIdentification.class)
                         .retrieve().bodyToMono( String.class).block();
 
 
-                if (URL_Anagram_Partie_auth.length == 3 ){
+                if (urls.isReady() ){
 
                     client_for_partie.post().uri("/startPartie")
                             .body(Mono.just("http://" + myIp + ":" + port), String.class)

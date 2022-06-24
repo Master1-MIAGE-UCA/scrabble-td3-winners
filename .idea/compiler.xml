@@ -21,7 +21,7 @@
       <module name="appariement" options="-parameters" />
       <module name="partie" options="-parameters" />
       <module name="player" options="-parameters" />
-      <module name="scrabble-td3-winners" options="" />
+      <module name="scrabble-td3-winners" options="-parameters" />
     </option>
   </component>
 </project>

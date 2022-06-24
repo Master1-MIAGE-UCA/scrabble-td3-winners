@@ -25,7 +25,7 @@ public class partieWebController {
     private WebClient webClient;
 
 
-    @PostMapping("/connexion/")
+    @PostMapping("/connexion")
     public void getValue(@RequestBody playerIdentification playerId) {
         System.out.println("Moteur > connexion acceptée de "+playerId.getName());
         this.playerId = playerId;
