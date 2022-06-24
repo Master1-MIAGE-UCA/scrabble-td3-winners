@@ -20,13 +20,14 @@ import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
 @AutoConfigureMockMvc
 public class ConnexionTest {
-/*
+
     @Autowired
     Partie testPartie;
     Partie partie;
@@ -46,28 +47,32 @@ public class ConnexionTest {
         ReflectionTestUtils.setField(webController, "game", partie);
     }
 
-    @Test    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
+    @Test
+public void testfortest() throws Exception{
+
+this.mockMvc.perform(post("/test")).andDo(print()).andExpect(status()
+        .isOk()).andExpect(content().string(containsString("hello")));
+    }
+
+    @Test
+    public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
         playerIdentification id = new playerIdentification();
         String paramConnexion = objectMapper.writeValueAsString(id);
 
-        this.mockMvc.perform(post("/connexion/").contentType(MediaType.APPLICATION_JSON)
-                        .content(paramConnexion)).andExpect(status().isOk());
+        this.mockMvc.perform(post("/connexion").contentType(MediaType.APPLICATION_JSON)
+                        .content(paramConnexion)).andExpect(status().isOk()) .andExpect(content().string("true"));
 
         TimeUnit.MILLISECONDS.sleep(500); // le temps pour travis de lancer le thread
 
         //verify(partie, times(1)).lancerPartie();
-        verify(partie, times(1)).run();
+       // verify(partie, times(1)).addPlayer(id);
 
 
-        this.mockMvc.perform(post("/connexion/").contentType(MediaType.APPLICATION_JSON)
-                        .content(paramConnexion)).andExpect(status().isOk())
-                .andExpect(content().string(containsString("false")));
-
-        TimeUnit.MILLISECONDS.sleep(500);
-
-        verify(partie, times(2)).lancerPartie();
-        verify(partie, times(1)).run(); //
     }
 
-*/
+
+
+
+
+
 }
