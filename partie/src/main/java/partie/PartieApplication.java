@@ -20,9 +20,9 @@ public class PartieApplication {
     @Bean
     public CommandLineRunner scriptLancement(WebClient.Builder builder) {
         return args -> {
-            System.out.println("salaaaaaam "+args);
+
             if (args.length > 0) {
-                System.out.println("salaaaaaamyy ");
+
                 // args[0] c'est l'uril d'appariement, en version courte ici pour simplifier la ligne de commande
                 String urlApp = "http://localhost:" + args[0];
                 WebClient client = builder.baseUrl(urlApp).build();
