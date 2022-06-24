@@ -20,7 +20,9 @@ public class PartieApplication {
     @Bean
     public CommandLineRunner scriptLancement(WebClient.Builder builder) {
         return args -> {
+
             if (args.length > 0) {
+
                 // args[0] c'est l'uril d'appariement, en version courte ici pour simplifier la ligne de commande
                 String urlApp = "http://localhost:" + args[0];
                 WebClient client = builder.baseUrl(urlApp).build();
@@ -28,7 +30,7 @@ public class PartieApplication {
                 String myIp = InetAddress.getLocalHost().getHostAddress();
                 client.post().uri("/identification/partie")
                         .body(Mono.just("http://" + myIp + ":" + port), String.class)
-                        .retrieve().bodyToMono(String[].class);
+                        .retrieve().bodyToMono(String[].class).block();
 
 
             }

@@ -34,9 +34,10 @@ private ArrayList<playerIdentification> listPlayer= new ArrayList();
     public void setListPlayer(ArrayList<playerIdentification> listPlayer) {
         this.listPlayer = listPlayer;
     }
-    public void addPlayer(playerIdentification Player) {
+    public boolean addPlayer(playerIdentification Player) {
 
 
         this.listPlayer.add(Player);
+        return true;
     }
 }

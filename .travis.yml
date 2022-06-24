@@ -17,16 +17,19 @@ install:
 #   - docker images
 
 script:
-  - mvn test
+  - mvn clean install
   - cd appariement
-  - mvn exec:java &
+  - mvn exec:java
   - cd ..
   - cd partie
-  - mvn exec:java -Dserver.port=9090 -Dexec.args="http://localhost:8080" &
+  - mvn exec:java -Dserver.port=9090 -Dexec.args="8080"
   - cd ..
   - cd anagrammeur
-  - mvn exec:java -Dserver.port=9191 -Dexec.args="http://localhost:8080" &
+  - mvn exec:java -Dserver.port=9191 -Dexec.args="8080"
   - cd ..
   - cd player
-  - mvn exec:java -Dserver.port=9292 -Dexec.args="http://localhost:8080" 
+  - mvn exec:java -Dserver.port=9292 -Dexec.args="8080"
+  - cd ..
+  - cd player
+  - mvn exec:java -Dserver.port=9293 -Dexec.args="8080"
   - cd ..
