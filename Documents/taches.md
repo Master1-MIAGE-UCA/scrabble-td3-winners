@@ -8,7 +8,7 @@
 - Permettre au joueur de positionner un mot(déja fait)
 - Permettre de s'identifier à l'appariement
 - Se connecter à la partie grace à l'url récupéré
-
+       
 # Partie
 - Donner la main à un joueur
 - Consommer les webservices de joueurs(/jouer)
