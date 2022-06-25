@@ -3,20 +3,20 @@ package anagramme;
 import java.util.ArrayList;
 
 public class gameState {
-    ArrayList<placedWord> wordsList ;
+    ArrayList<position> wordsList ;
     // where letters are placed
     ArrayList<Character> easel;
 
-    public gameState(ArrayList<placedWord> wordsList, ArrayList<Character> easel) {
+    public gameState(ArrayList<position> wordsList, ArrayList<Character> easel) {
         this.wordsList = wordsList;
         this.easel = easel;
     }
 
-    public ArrayList<placedWord> getWordsList() {
+    public ArrayList<position> getWordsList() {
         return wordsList;
     }
 
-    public void setWordsList(ArrayList<placedWord> wordsList) {
+    public void setWordsList(ArrayList<position> wordsList) {
         this.wordsList = wordsList;
     }
 

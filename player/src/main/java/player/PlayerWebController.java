@@ -1,7 +1,7 @@
 package player;
 
 import anagramme.gameState;
-import anagramme.placedWord;
+import anagramme.position;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +16,7 @@ public class PlayerWebController {
 
     // API post for sending the placed word
     @PostMapping("/placeWord")
-    public placedWord play(@RequestBody gameState gameState) {
+    public position play(@RequestBody gameState gameState) {
         System.out.println("play > I have to play on "+ gameState);
         return player.play(gameState);
     }
