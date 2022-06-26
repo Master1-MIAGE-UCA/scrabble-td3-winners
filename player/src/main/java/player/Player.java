@@ -14,7 +14,8 @@ public class Player extends playerIdentification {
     //  Function that permit player to place a word according to abscissa and ordinate
     public position play(gameState gameState) {
         System.out.println("Player >>>> I play the word exemple in abscissa 17 and ordinate 17 vertically");
-        return new position("exemple", 17, 87,true) ;
+        return new position( 17, 87) ;
+
     }
 
     public String getUrl_anagrammeur() {
