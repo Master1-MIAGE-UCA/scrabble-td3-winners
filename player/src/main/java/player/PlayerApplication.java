@@ -23,6 +23,7 @@ PlayerApplication {
     @Autowired
     Player player;
     private String Url_anagrammeur;
+    private String url_appariement;
     public static void main(String[] args) {
         SpringApplication.run(PlayerApplication.class, args);
     }
@@ -52,6 +53,10 @@ PlayerApplication {
 
                 WebClient client_for_partie = builder.baseUrl(this.Url_partie).build();
 
+
+
+
+
                  client_for_partie.post().uri("/connexion/")
                         .body(Mono.just(player), playerIdentification.class)
                         .retrieve().bodyToMono( String.class).block();
@@ -62,6 +67,13 @@ PlayerApplication {
                     client_for_partie.post().uri("/startPartie")
                             .body(Mono.just("http://" + myIp + ":" + port), String.class)
                             .retrieve().bodyToMono( String.class).block();
+
+                    String urlAPPA = "http://localhost:8080" ;
+                    WebClient clientfor_appariement = builder.baseUrl(urlAPPA).build();
+                    clientfor_appariement.post().uri("/finishgame")
+                            .body(Mono.just(player), playerIdentification.class)
+                            .retrieve().bodyToMono( String.class);
+
 
                 }
 

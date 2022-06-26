@@ -3,6 +3,7 @@ package Responses;
 public class UrlResponse {
 
     private String UrlPartie;
+    private String appariement;
     private String UrlAnnagrameur;
     private boolean ready = false;
     public UrlResponse() {
@@ -31,5 +32,13 @@ public class UrlResponse {
 
     public void setReady(boolean ready) {
         this.ready = ready;
+    }
+
+    public String getAppariement() {
+        return appariement;
+    }
+
+    public void setAppariement(String appariement) {
+        this.appariement = appariement;
     }
 }

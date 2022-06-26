@@ -14,6 +14,7 @@ import java.net.InetAddress;
 public class PartieApplication {
     @Value("${server.port}")
     private int port;
+
     public static void main(String[] args) {
         SpringApplication.run(PartieApplication.class, args);
     }

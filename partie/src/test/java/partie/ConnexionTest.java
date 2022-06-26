@@ -16,6 +16,7 @@ import play.playerIdentification;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
@@ -47,12 +48,7 @@ public class ConnexionTest {
         ReflectionTestUtils.setField(webController, "game", partie);
     }
 
-    @Test
-public void testfortest() throws Exception{
 
-this.mockMvc.perform(post("/test")).andDo(print()).andExpect(status()
-        .isOk()).andExpect(content().string(containsString("hello")));
-    }
 
     @Test
     public void shouldReturnTrue_theRealMethodWithParam() throws Exception {
@@ -65,7 +61,7 @@ this.mockMvc.perform(post("/test")).andDo(print()).andExpect(status()
         TimeUnit.MILLISECONDS.sleep(500); // le temps pour travis de lancer le thread
 
         //verify(partie, times(1)).lancerPartie();
-       // verify(partie, times(1)).addPlayer(id);
+       verify(partie, times(1)).addPlayer(any());
 
 
     }

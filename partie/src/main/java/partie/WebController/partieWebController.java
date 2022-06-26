@@ -47,4 +47,32 @@ public class partieWebController {
         g = game.getGrid();
         g.toString();
     }
+
+    @PostMapping("/finish")
+    public void end() {
+
+
+
+
+
+        System.out.println(">> We have to end partie " );
+        System.exit(0);
+       /* if (end) {
+            Thread thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("End > end of the game");
+                    try {
+                        TimeUnit.MILLISECONDS.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } finally {
+                        System.exit(0);
+                    }
+
+                }
+            });
+            thread.start();
+        }*/
+    }
 }

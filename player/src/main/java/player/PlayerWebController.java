@@ -3,6 +3,7 @@ package player;
 import anagramme.gameState;
 import anagramme.position;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +24,9 @@ public class PlayerWebController {
 
     // API post for finishing game
     @PostMapping("/finish")
-    public void end(@RequestBody Boolean end) {
-        System.out.println(">> We have to end: " + end);
-
+    public void end() {
+        System.out.println(">> We have to end Player " );
+        System.exit(0);
        /* if (end) {
             Thread thread = new Thread(new Runnable() {
                 @Override
