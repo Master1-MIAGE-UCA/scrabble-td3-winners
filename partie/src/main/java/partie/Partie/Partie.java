@@ -1,5 +1,6 @@
 package partie.Partie;
 
+import anagramme.grid;
 import org.springframework.stereotype.Component;
 import play.playerIdentification;
 
@@ -9,6 +10,16 @@ import java.util.ArrayList;
 public class Partie implements Runnable{
 private ArrayList<playerIdentification> listPlayer= new ArrayList();
     Thread game ;
+
+    public anagramme.grid getGrid() {
+        return grid;
+    }
+
+    public void setGrid(anagramme.grid grid) {
+        this.grid = grid;
+    }
+
+    private grid grid;
 
     public boolean lancerPartie() {
         boolean result = (game == null);
@@ -21,6 +32,7 @@ private ArrayList<playerIdentification> listPlayer= new ArrayList();
         }
         return result;
     }
+
 
     @Override
     public void run() {

@@ -1,5 +1,6 @@
 package partie.WebController;
 
+import anagramme.grid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,7 +12,6 @@ import play.playerIdentification;
 
 @RestController
 public class partieWebController {
-
 
 
     playerIdentification playerId;
@@ -27,20 +27,24 @@ public class partieWebController {
 
     @PostMapping("/connexion")
     public boolean getValue(@RequestBody playerIdentification playerId) {
-        System.out.println("Moteur > connexion acceptée de "+playerId.getName());
+        System.out.println("Moteur > connexion acceptée de " + playerId.getName());
         this.playerId = playerId;
-       // webClient = create(playerId.getUrl());
-       return game.addPlayer(this.playerId );
+        // webClient = create(playerId.getUrl());
+        return game.addPlayer(this.playerId);
 
     }
+
     @PostMapping("/startPartie")
     public void startPartie() {
-     game.lancerPartie();
+        game.lancerPartie();
 
     }
-    @PostMapping("/test")
-    public String test() {
 
-        return "hello";
+    @PostMapping("/grid")
+    public void grid() {
+
+        grid g = new grid();
+        g = game.getGrid();
+        g.toString();
     }
 }

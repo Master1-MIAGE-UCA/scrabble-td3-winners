@@ -3,10 +3,13 @@ package anagramme;
 
 import java.util.Arrays;
 
+
 public class grid {
 
  box[][] grid;
+public grid(){
 
+}
  public grid(box[][] grid) {
   this.grid = new box[15][15];
  }
@@ -27,6 +30,7 @@ public class grid {
     this.grid[i][j] = new box(i,j);
    }
   }
+  //this.grid[7][7].setLetter(new Letter("*",0));
  }
  //affichage de la grille
  @Override
@@ -35,6 +39,13 @@ public class grid {
           "grid=" + Arrays.toString(grid) +
           '}';
  }
+
+ public void addLetterInGrid(placeLetter letter, position position) {
+  this.grid[position.getAbscissa()][position.getOrdinate()].setLetter(letter);
+
+
+ }
+
 
  public void show() {
   for (int i = 0; i < this.grid.length; i++) {

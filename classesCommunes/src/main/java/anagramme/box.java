@@ -3,6 +3,7 @@ package anagramme;
 public class box {
     int row;
     int cell;
+    placeLetter letter;
 
     public int getRow() {
         return row;
@@ -24,4 +25,12 @@ public class box {
         this.row = row;
         this.cell = cell;
     }
+
+    public void setLetter(placeLetter letter) {
+        this.letter = letter;
+    }
+    public placeLetter getLetter() {
+        return letter;
+    }
+
 }
